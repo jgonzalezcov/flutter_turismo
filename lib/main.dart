@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tourist/screens/home/home_view.dart';
+import 'package:tourist/widgets/header.widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,13 +37,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
+        body: SafeArea(
+      child: Center(
         child: Column(
           children: [
+            HeaderWidget(textHeader: 'Turismo Chile', heightHeader: 120),
             HomeView(),
           ],
         ),
       ),
-    );
+    ));
   }
 }
