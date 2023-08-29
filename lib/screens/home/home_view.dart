@@ -16,6 +16,7 @@ class HomeView extends StatelessWidget {
       builder: (context, model, child) => Expanded(
         child: Column(
           children: [
+            const SizedBox(height: 93),
             if (model.listCard.isNotEmpty)
               Expanded(
                 child: ListView.builder(

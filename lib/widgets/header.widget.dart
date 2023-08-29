@@ -45,13 +45,9 @@ class BlueRectangle extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(5),
               child: Container(
-                alignment: Alignment.topLeft,
-                child: const Icon(
-                  Icons.sunny,
-                  size: 60,
-                  color: Color.fromARGB(255, 255, 255, 25),
-                ),
-              ),
+                  height: 58,
+                  alignment: Alignment.topLeft,
+                  child: const Image(image: AssetImage('assets/imgs/sol.png'))),
             ),
             Padding(
               padding: const EdgeInsets.all(5),
@@ -85,8 +81,9 @@ class BlueRectanglePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     const Gradient gradient = LinearGradient(
       colors: [
-        Color.fromARGB(248, 0, 255, 234), // Verde
-        Color.fromARGB(255, 39, 114, 23), // Azul
+        Color.fromARGB(255, 45, 125, 216),
+        Color.fromARGB(248, 27, 147, 16),
+        Color.fromARGB(252, 228, 214, 50),
       ],
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
@@ -96,8 +93,8 @@ class BlueRectanglePainter extends CustomPainter {
           Rect.fromPoints(const Offset(0, 0), Offset(size.width, size.height)))
       ..style = PaintingStyle.fill;
     const double borderRadius = 25.0;
-    const double openingHeight = 3;
-    const double openingWidthPercentage = 0.87;
+    const double openingHeight = 5;
+    const double openingWidthPercentage = 0.985;
     final double openingWidth = size.width * openingWidthPercentage;
 
     final RRect rRect = RRect.fromRectAndCorners(

@@ -13,7 +13,9 @@ class _CardWidgetState extends State<CardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.all(5),
+        margin: widget.cardData.id == 1
+            ? const EdgeInsets.fromLTRB(5, 40, 5, 5)
+            : const EdgeInsets.all(5),
         width: 150,
         height: 220,
         decoration: BoxDecoration(
@@ -24,8 +26,8 @@ class _CardWidgetState extends State<CardWidget> {
             fit: BoxFit.cover,
           ),
           border: Border.all(
-            color: Colors.green, // Color del borde
-            width: 3.0, // Ancho del borde
+            color: Colors.green,
+            width: 3.0,
           ),
         ),
         child: Stack(children: [

@@ -39,10 +39,23 @@ class _MyHomePageState extends State<MyHomePage> {
     return const Scaffold(
         body: SafeArea(
       child: Center(
-        child: Column(
+        child: Stack(
           children: [
-            HeaderWidget(textHeader: 'Turismo Chile', heightHeader: 120),
-            HomeView(),
+            Positioned(
+              top: 0, // Coloca el encabezado en la parte superior
+              left: 0,
+              right: 0,
+              height: 120, // Altura del encabezado
+              child:
+                  HeaderWidget(textHeader: 'Turismo Chile', heightHeader: 120),
+            ),
+            Positioned(
+              top: 0, // Deja espacio para el encabezado
+              left: 0,
+              right: 0,
+              bottom: 0,
+              child: HomeView(),
+            ),
           ],
         ),
       ),

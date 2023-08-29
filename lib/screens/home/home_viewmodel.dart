@@ -21,7 +21,6 @@ class HomeViewModel extends BaseViewModel {
       }
 
       _listCard = listData;
-      print(' soy yo ${_listCard.length}');
       notifyListeners();
     } else {
       throw Exception("Fallo la conexión");
