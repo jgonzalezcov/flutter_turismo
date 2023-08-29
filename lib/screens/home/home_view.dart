@@ -32,7 +32,7 @@ class HomeView extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                             border: Border.all(
-                              color: Colors.blue, // Color del borde
+                              color: Colors.green, // Color del borde
                               width: 3.0, // Ancho del borde
                             ),
                           ),

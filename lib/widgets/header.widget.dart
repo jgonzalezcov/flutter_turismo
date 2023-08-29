@@ -86,7 +86,7 @@ class BlueRectanglePainter extends CustomPainter {
     const Gradient gradient = LinearGradient(
       colors: [
         Color.fromARGB(248, 0, 255, 234), // Verde
-        Color.fromARGB(255, 0, 94, 255), // Azul
+        Color.fromARGB(255, 39, 114, 23), // Azul
       ],
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
