@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tourist/screens/home/home_view.dart';
-import 'package:tourist/widgets/header.widget.dart';
+import 'package:tourist/routes/app.routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,14 +9,15 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Tourist',
+      initialRoute: AppRoutes.initialRouter,
+      routes: AppRoutes.routes,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -37,28 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        body: SafeArea(
-      child: Center(
-        child: Stack(
-          children: [
-            Positioned(
-              top: 0, // Coloca el encabezado en la parte superior
-              left: 0,
-              right: 0,
-              height: 120, // Altura del encabezado
-              child:
-                  HeaderWidget(textHeader: 'Turismo Chile', heightHeader: 120),
-            ),
-            Positioned(
-              top: 0, // Deja espacio para el encabezado
-              left: 0,
-              right: 0,
-              bottom: 0,
-              child: HomeView(),
-            ),
-          ],
-        ),
-      ),
-    ));
+      body: HomeView(),
+    );
   }
 }

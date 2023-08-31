@@ -1,15 +1,19 @@
-// ignore_for_file: prefer_initializing_formals
-
 class MyCard {
-  late int id;
-  late String name;
-  late String url;
-  late String descriptionShort;
+  final int id;
+  final String name;
+  final String url;
+  final String descriptionShort;
+  final String descriptionFull;
+  final double lat;
+  final double lon;
 
-  MyCard(int id, String name, String url, String descriptionShort) {
-    this.id = id;
-    this.name = name;
-    this.url = url;
-    this.descriptionShort = descriptionShort;
-  }
+  MyCard(
+    this.id,
+    this.name,
+    this.url,
+    this.descriptionShort,
+    this.descriptionFull,
+    this.lat,
+    this.lon,
+  );
 }

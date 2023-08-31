@@ -1,14 +1,13 @@
-import 'package:stacked/stacked.dart';
-import 'package:http/http.dart' as http;
-import 'package:tourist/model/card.Model.dart';
-import 'dart:convert';
+import 'package:tourist/helpers/packages.dart';
+import 'package:tourist/model/card.model.dart';
 
 class HomeViewModel extends BaseViewModel {
   List<MyCard> _listCard = [];
   List<MyCard> get listCard => _listCard;
+
   Future<void> getCard() async {
     List<MyCard> listData = [];
-    final response = await http.get(Uri.parse(
+    final response = await Client().get(Uri.parse(
         'https://backednodeflutter-production.up.railway.app/tourist'));
 
     if (response.statusCode == 200) {
@@ -17,7 +16,14 @@ class HomeViewModel extends BaseViewModel {
 
       for (var item in jsonData) {
         listData.add(MyCard(
-            item["id"], item["name"], item["url"], item["description_short"]));
+          item["id"],
+          item["name"],
+          item["url"],
+          item["description_short"],
+          item["description_full"],
+          (item['lat'] as num).toDouble(),
+          (item['lon'] as num).toDouble(),
+        ));
       }
 
       _listCard = listData;

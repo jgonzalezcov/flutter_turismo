@@ -93,7 +93,7 @@ class BlueRectanglePainter extends CustomPainter {
           Rect.fromPoints(const Offset(0, 0), Offset(size.width, size.height)))
       ..style = PaintingStyle.fill;
     const double borderRadius = 25.0;
-    const double openingHeight = 5;
+    const double openingHeight = 10;
     const double openingWidthPercentage = 0.985;
     final double openingWidth = size.width * openingWidthPercentage;
 
@@ -115,7 +115,8 @@ class BlueRectanglePainter extends CustomPainter {
       bottomRight: const Radius.circular(openingHeight / 2),
     );
 
-    canvas.drawRRect(openingRRect, Paint()..color = Colors.orange);
+    canvas.drawRRect(
+        openingRRect, Paint()..color = const Color.fromARGB(255, 27, 169, 53));
   }
 
   @override
