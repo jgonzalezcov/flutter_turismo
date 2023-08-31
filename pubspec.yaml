@@ -88,12 +88,22 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
-  # For details regarding fonts from package dependencies,
+
+ 
+ 
+   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+ 
   assets:
     - assets/imgs/
     - assets/
   fonts:
     - family: Freehand
       fonts:
-        - asset: assets/fonts/Freehand-Regular.ttf  
+        - asset: assets/fonts/Freehand-Regular.ttf
+    - family: GreatVibes
+      fonts:
+        - asset: assets/fonts/GreatVibes-Regular.ttf
+    - family: LobsterTwo
+      fonts:
+        - asset: assets/fonts/LobsterTwo-Regular.ttf

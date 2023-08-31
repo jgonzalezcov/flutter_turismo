@@ -76,7 +76,10 @@ class _CardWidgetState extends State<CardWidget> {
                     padding: const EdgeInsets.only(left: 15.0),
                     child: Text(
                       widget.cardData.name,
-                      style: const TextStyle(color: Colors.white),
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'LobsterTwo',
+                          fontSize: 16),
                     ),
                   ),
                 ),
@@ -86,7 +89,8 @@ class _CardWidgetState extends State<CardWidget> {
                   child: Text(
                     widget.cardData.descriptionShort,
                     style: const TextStyle(
-                      fontFamily: 'YsabeauOffice',
+                      fontFamily: 'LobsterTwo',
+                      fontSize: 15.8,
                       color: Colors.green,
                     ),
                   ),
