@@ -92,7 +92,7 @@ class BlueRectanglePainter extends CustomPainter {
       ..shader = gradient.createShader(
           Rect.fromPoints(const Offset(0, 0), Offset(size.width, size.height)))
       ..style = PaintingStyle.fill;
-    const double borderRadius = 25.0;
+    const double borderRadius = 45.0;
     const double openingHeight = 10;
     const double openingWidthPercentage = 0.985;
     final double openingWidth = size.width * openingWidthPercentage;

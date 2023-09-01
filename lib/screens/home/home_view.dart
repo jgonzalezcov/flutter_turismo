@@ -19,7 +19,7 @@ class HomeView extends StatelessWidget {
                 right: 0,
                 height: 120,
                 child: HeaderWidget(
-                    textHeader: 'Turismo Chile', heightHeader: 120),
+                    textHeader: 'Turismo Chile', heightHeader: 200),
               ),
               Positioned(
                 top: 0,
