@@ -1,3 +1,4 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:tourist/helpers/packages.dart';
 import 'package:tourist/model/card.model.dart';
 
@@ -7,8 +8,8 @@ class HomeViewModel extends BaseViewModel {
 
   Future<void> getCard() async {
     List<MyCard> listData = [];
-    final response = await Client().get(Uri.parse(
-        'https://backednodeflutter-production.up.railway.app/tourist'));
+    String url = dotenv.get("API_HOST", fallback: "");
+    final response = await Client().get(Uri.parse(url));
 
     if (response.statusCode == 200) {
       String body = utf8.decode(response.bodyBytes);

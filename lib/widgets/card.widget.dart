@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:tourist/model/card.model.dart';
 
 class CardWidget extends StatefulWidget {
@@ -12,6 +13,7 @@ class CardWidget extends StatefulWidget {
 class _CardWidgetState extends State<CardWidget> {
   @override
   Widget build(BuildContext context) {
+    String urlImg = dotenv.get("HOST_IMG", fallback: "");
     return Material(
       child: InkWell(
         onTap: () {
@@ -47,7 +49,7 @@ class _CardWidgetState extends State<CardWidget> {
                     height: 220,
                     placeholder: const AssetImage('assets/imgs/fondo7.gif'),
                     image: NetworkImage(
-                      'https://backednodeflutter-production.up.railway.app/${widget.cardData.url}',
+                      '$urlImg${widget.cardData.url}',
                     ),
                     fit: BoxFit.cover,
                   ),
